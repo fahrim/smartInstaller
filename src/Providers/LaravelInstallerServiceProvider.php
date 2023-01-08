@@ -1,11 +1,11 @@
 <?php
 
-namespace RachidLaasri\LaravelInstaller\Providers;
+namespace Smarteknoloji\SmartlInstaller\Providers;
 
 use Illuminate\Routing\Router;
 use Illuminate\Support\ServiceProvider;
-use RachidLaasri\LaravelInstaller\Middleware\canInstall;
-use RachidLaasri\LaravelInstaller\Middleware\canUpdate;
+use Smarteknoloji\SmartlInstaller\Middleware\canInstall;
+use Smarteknoloji\SmartlInstaller\Middleware\canUpdate;
 
 class LaravelInstallerServiceProvider extends ServiceProvider
 {

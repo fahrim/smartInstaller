@@ -1,10 +1,12 @@
 {
-    "name": "fahrim/smart-installer",
+    "name": "smarteknoloji/smart-installer",
     "description": "Smart installer for Laravel",
     "authors": [
         {
             "name": "Fahri Meral",
-            "email": "fahri.meral@smarteknoloji.com"
+            "email": "fahri.meral@smarteknoloji.com",
+            "homepage": "https://www.smarteknoloji.com",
+            "role": "Developer"
         }
     ],
     "require": {
@@ -12,7 +14,7 @@
     },
     "autoload": {
         "psr-4": {
-            "RachidLaasri\\LaravelInstaller\\": "src/"
+            "Smarteknoloji\\SmartlInstaller\\": "src/"
         },
         "files": [
             "src/Helpers/functions.php"
@@ -21,7 +23,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "RachidLaasri\\LaravelInstaller\\Providers\\LaravelInstallerServiceProvider"
+                "Smarteknoloji\\SmartlInstaller\\Providers\\LaravelInstallerServiceProvider"
             ]
         }
     },

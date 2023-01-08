@@ -1,14 +1,14 @@
 <?php
 
-namespace RachidLaasri\LaravelInstaller\Controllers;
+namespace Smarteknoloji\SmartlInstaller\Controllers;
 
 use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 use Illuminate\Routing\Redirector;
 use Illuminate\Support\Facades\DB;
-use RachidLaasri\LaravelInstaller\Events\EnvironmentSaved;
-use RachidLaasri\LaravelInstaller\Helpers\EnvironmentManager;
+use Smarteknoloji\SmartlInstaller\Events\EnvironmentSaved;
+use Smarteknoloji\SmartlInstaller\Helpers\EnvironmentManager;
 use Validator;
 
 class EnvironmentController extends Controller

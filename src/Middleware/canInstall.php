@@ -1,6 +1,6 @@
 <?php
 
-namespace RachidLaasri\LaravelInstaller\Middleware;
+namespace Smarteknoloji\SmartlInstaller\Middleware;
 
 use Closure;
 use Redirect;
