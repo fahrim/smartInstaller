@@ -47,18 +47,18 @@ class LaravelInstallerServiceProvider extends ServiceProvider
     {
         $this->publishes([
             __DIR__.'/../Config/installer.php' => base_path('config/installer.php'),
-        ], 'laravelinstaller');
+        ], 'smartinstaller');
 
         $this->publishes([
             __DIR__.'/../assets' => public_path('installer'),
-        ], 'laravelinstaller');
+        ], 'smartinstaller');
 
         $this->publishes([
             __DIR__.'/../Views' => base_path('resources/views/vendor/installer'),
-        ], 'laravelinstaller');
+        ], 'smartinstaller');
 
         $this->publishes([
             __DIR__.'/../Lang' => base_path('resources/lang'),
-        ], 'laravelinstaller');
+        ], 'smartinstaller');
     }
 }
