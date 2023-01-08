@@ -1,15 +1,10 @@
 {
-    "name": "rachidlaasri/laravel-installer",
-    "description": "Laravel web installer",
-    "license": "MIT",
+    "name": "fahrim/smart-installer",
+    "description": "Smart installer for Laravel",
     "authors": [
         {
-            "name": "Rachid Laasri",
-            "email": "rashidlaasri@gmail.com"
-        },
-        {
-            "name": "Jeremy Kenedy",
-            "email": "jeremykenedy@gmail.com"
+            "name": "Fahri Meral",
+            "email": "fahri.meral@smarteknoloji.com"
         }
     ],
     "require": {
