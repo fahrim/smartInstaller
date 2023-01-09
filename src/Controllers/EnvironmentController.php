@@ -1,14 +1,14 @@
 <?php
 
-namespace Smarteknoloji\SmartlInstaller\Controllers;
+namespace Smarteknoloji\SmartInstaller\Controllers;
 
 use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 use Illuminate\Routing\Redirector;
 use Illuminate\Support\Facades\DB;
-use Smarteknoloji\SmartlInstaller\Events\EnvironmentSaved;
-use Smarteknoloji\SmartlInstaller\Helpers\EnvironmentManager;
+use Smarteknoloji\SmartInstaller\Events\EnvironmentSaved;
+use Smarteknoloji\SmartInstaller\Helpers\EnvironmentManager;
 use Validator;
 
 class EnvironmentController extends Controller

@@ -1,9 +1,9 @@
 <?php
 
-namespace Smarteknoloji\SmartlInstaller\Controllers;
+namespace Smarteknoloji\SmartInstaller\Controllers;
 
 use Illuminate\Routing\Controller;
-use Smarteknoloji\SmartlInstaller\Helpers\PermissionsChecker;
+use Smarteknoloji\SmartInstaller\Helpers\PermissionsChecker;
 
 class PermissionsController extends Controller
 {

@@ -1,12 +1,12 @@
 <?php
 
-namespace Smarteknoloji\SmartlInstaller\Middleware;
+namespace Smarteknoloji\SmartInstaller\Middleware;
 
 use Closure;
 
 class canUpdate
 {
-    use \Smarteknoloji\SmartlInstaller\Helpers\MigrationsHelper;
+    use \Smarteknoloji\SmartInstaller\Helpers\MigrationsHelper;
 
     /**
      * Handle an incoming request.

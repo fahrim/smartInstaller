@@ -1,6 +1,6 @@
 <?php
 
-Route::group(['prefix' => 'install', 'as' => 'LaravelInstaller::', 'namespace' => 'Smarteknoloji\SmartlInstaller\Controllers', 'middleware' => ['web', 'install']], function () {
+Route::group(['prefix' => 'install', 'as' => 'LaravelInstaller::', 'namespace' => 'Smarteknoloji\SmartInstaller\Controllers', 'middleware' => ['web', 'install']], function () {
     Route::get('/', [
         'as' => 'welcome',
         'uses' => 'WelcomeController@welcome',
@@ -52,7 +52,7 @@ Route::group(['prefix' => 'install', 'as' => 'LaravelInstaller::', 'namespace' =
     ]);
 });
 
-Route::group(['prefix' => 'update', 'as' => 'LaravelUpdater::', 'namespace' => 'Smarteknoloji\SmartlInstaller\Controllers', 'middleware' => 'web'], function () {
+Route::group(['prefix' => 'update', 'as' => 'LaravelUpdater::', 'namespace' => 'Smarteknoloji\SmartInstaller\Controllers', 'middleware' => 'web'], function () {
     Route::group(['middleware' => 'update'], function () {
         Route::get('/', [
             'as' => 'welcome',
