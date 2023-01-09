@@ -1,6 +1,7 @@
 {
     "name": "smarteknoloji/smart-installer",
     "description": "Smart installer for Laravel",
+    "license": "GPL-3.0-or-later",
     "authors": [
         {
             "name": "Fahri Meral",
