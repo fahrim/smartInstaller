@@ -3107,21 +3107,6 @@ input[type=text] {
           align-items: center;
   border-radius: 50%;
   color: #fff; }
-  .step__icon.welcome:before {
-    content: '\f144';
-    font-family: Ionicons; }
-  .step__icon.requirements:before {
-    content: '\f127';
-    font-family: Ionicons; }
-  .step__icon.permissions:before {
-    content: '\f296';
-    font-family: Ionicons; }
-  .step__icon.database:before {
-    content: '\f454';
-    font-family: Ionicons; }
-  .step__icon.update:before {
-    content: '\f2bf';
-    font-family: Ionicons; }
 
 .main {
   margin-top: -20px;

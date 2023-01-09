@@ -831,26 +831,6 @@ input[type=text] {
 	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
 	border-radius: 50%;
 	color: $color_10;
-	&.welcome:before {
-		content: '\f144';
-		font-family: $font_10;
-	}
-	&.requirements:before {
-		content: '\f127';
-		font-family: $font_10;
-	}
-	&.permissions:before {
-		content: '\f296';
-		font-family: $font_10;
-	}
-	&.database:before {
-		content: '\f454';
-		font-family: $font_10;
-	}
-	&.update:before {
-		content: '\f2bf';
-		font-family: $font_10;
-	}
 }
 .main {
 	margin-top: -20px;
