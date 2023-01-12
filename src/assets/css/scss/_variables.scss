@@ -40,14 +40,35 @@ $color_37: #ccc;
 $color_38: rgba(0, 0, 0, 0.3);
 $color_39: #ffffff;
 $color_40: #ffc107;
-$color_41: #856404;
+$color_41: #997404;
 $color_42: #fff3cd;
-$color_43: #ffeeba;
+$color_43: #ffe69c;
+$color_44: #f5f8ff;
+$color_w40: rgb(255 255 255 / 40%);
+$color_w30: rgb(255 255 255 / 30%);
+$color_w20: rgb(255 255 255 / 20%);
+$color_w10: rgb(255 255 255 / 10%);
+$color_w05: rgb(255 255 255 / 5%);
+$color_45: #4273FA;
+$color_46: #013bdd;
+$color_47: #ffea61;
+$color_48: #ffc816;
+$color_49: #4844ee;
+$color_50: #d1d6ff;
+
+//gradients
+$gradient_1: -webkit-linear-gradient(left,#4273fa,#5009df,#7e38f5);
+$gradient_2: -webkit-linear-gradient(right, #4273FA, #013bdd);
+$gradient_2x: -webkit-linear-gradient(right, #4273FA, #013bdd, #4273FA, #013bdd);
+$gradient_warning_2x: -webkit-linear-gradient(right, $color_47, $color_48, $color_47, $color_48);
+$gradient_save_2x: linear-gradient(90deg, #24d292, #4463f6, #9b58d5, #24d292);
+$gradient_install_2x: linear-gradient(90deg, #00ff68, #4273fa, #013bdd, #24d292);
+$gradient_accordion: linear-gradient(90deg, #4270f9, #4844ee);
 
 //fonts
 $font_0: sans-serif;
 $font_1: monospace;
-$font_2: Roboto;
+$font_2: Poppins;
 $font_3: Helvetica Neue;
 $font_4: Helvetica;
 $font_5: Arial;
@@ -55,8 +76,7 @@ $font_6: Courier New;
 $font_7: Courier;
 $font_8: Lucida Sans Typewriter;
 $font_9: Lucida Typewriter;
-$font_10: Ionicons;
 
 //urls
-$url_0: 'https://fonts.googleapis.com/css?family=Roboto:400,300,500,700,900';
-$url_1: '../img/background.png';
+$url_0: 'https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800';
+$url_1: '../img/background.jpg';

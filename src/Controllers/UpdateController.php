@@ -1,14 +1,14 @@
 <?php
 
-namespace Smarteknoloji\SmartlInstaller\Controllers;
+namespace Smarteknoloji\SmartInstaller\Controllers;
 
 use Illuminate\Routing\Controller;
-use Smarteknoloji\SmartlInstaller\Helpers\DatabaseManager;
-use Smarteknoloji\SmartlInstaller\Helpers\InstalledFileManager;
+use Smarteknoloji\SmartInstaller\Helpers\DatabaseManager;
+use Smarteknoloji\SmartInstaller\Helpers\InstalledFileManager;
 
 class UpdateController extends Controller
 {
-    use \Smarteknoloji\SmartlInstaller\Helpers\MigrationsHelper;
+    use \Smarteknoloji\SmartInstaller\Helpers\MigrationsHelper;
 
     /**
      * Display the updater welcome page.

@@ -15,7 +15,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Smarteknoloji\\SmartlInstaller\\": "src/"
+            "Smarteknoloji\\SmartInstaller\\": "src/"
         },
         "files": [
             "src/Helpers/functions.php"
@@ -24,7 +24,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Smarteknoloji\\SmartlInstaller\\Providers\\LaravelInstallerServiceProvider"
+                "Smarteknoloji\\SmartInstaller\\Providers\\LaravelInstallerServiceProvider"
             ]
         }
     },

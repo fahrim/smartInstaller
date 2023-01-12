@@ -1,6 +1,6 @@
 <?php
 
-namespace Smarteknoloji\SmartlInstaller\Events;
+namespace Smarteknoloji\SmartInstaller\Events;
 
 use Illuminate\Broadcasting\InteractsWithSockets;
 use Illuminate\Foundation\Events\Dispatchable;

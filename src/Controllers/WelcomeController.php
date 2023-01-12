@@ -1,6 +1,6 @@
 <?php
 
-namespace Smarteknoloji\SmartlInstaller\Controllers;
+namespace Smarteknoloji\SmartInstaller\Controllers;
 
 use Illuminate\Routing\Controller;
 

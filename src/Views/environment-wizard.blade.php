@@ -76,11 +76,11 @@
                     <label for="app_debug">
                         {{ trans('installer_messages.environment.wizard.form.app_debug_label') }}
                     </label>
-                    <label for="app_debug_true">
+                    <label class="radio" for="app_debug_true">
                         <input type="radio" name="app_debug" id="app_debug_true" value=true checked />
                         {{ trans('installer_messages.environment.wizard.form.app_debug_label_true') }}
                     </label>
-                    <label for="app_debug_false">
+                    <label class="radio" for="app_debug_false">
                         <input type="radio" name="app_debug" id="app_debug_false" value=false />
                         {{ trans('installer_messages.environment.wizard.form.app_debug_label_false') }}
                     </label>
@@ -126,14 +126,15 @@
                         </span>
                     @endif
                 </div>
-
-                <div class="buttons">
-                    <button class="button" onclick="showDatabaseSettings();return false">
+                <div class="button-group">
+                    <div class="gradient-btn-bg"></div>
+                    <button class="gradient-btn" onclick="showDatabaseSettings();return false">
                         {{ trans('installer_messages.environment.wizard.form.buttons.setup_database') }}
                         <i class="fa fa-angle-right fa-fw" aria-hidden="true"></i>
                     </button>
                 </div>
             </div>
+
             <div class="tab" id="tab2content">
 
                 <div class="form-group {{ $errors->has('database_connection') ? ' has-error ' : '' }}">
@@ -219,27 +220,23 @@
                     @endif
                 </div>
 
-                <div class="buttons">
-                    <button class="button" onclick="showApplicationSettings();return false">
+                <div class="button-group">
+                    <div class="gradient-btn-bg"></div>
+                    <button class="gradient-btn" onclick="showApplicationSettings();return false">
                         {{ trans('installer_messages.environment.wizard.form.buttons.setup_application') }}
                         <i class="fa fa-angle-right fa-fw" aria-hidden="true"></i>
                     </button>
                 </div>
             </div>
+
             <div class="tab" id="tab3content">
                 <div class="block">
                     <input type="radio" name="appSettingsTabs" id="appSettingsTab1" value="null" checked />
                     <label for="appSettingsTab1">
                         <span>
-                            {{ trans('installer_messages.environment.wizard.form.app_tabs.broadcasting_title') }}
+                            {!! trans('installer_messages.environment.wizard.form.app_tabs.broadcasting_title') !!}
                         </span>
                     </label>
-
-
-
-
-
-
 
                     <div class="info">
                         <div class="form-group {{ $errors->has('broadcast_driver') ? ' has-error ' : '' }}">
@@ -491,10 +488,12 @@
                         </div>
                     </div>
                 </div>
-                <div class="buttons">
-                    <button class="button" type="submit">
+                <div class="button-group">
+                    <div class="gradient-btn-bg install"></div>
+                    <button class="gradient-btn" type="submit">
+                        <i class="fa fa-check fa-fw" aria-hidden="true"></i>
                         {{ trans('installer_messages.environment.wizard.form.buttons.install') }}
-                        <i class="fa fa-angle-right fa-fw" aria-hidden="true"></i>
+                        <i class="fa fa-angle-double-right fa-fw" aria-hidden="true"></i>
                     </button>
                 </div>
             </div>
@@ -506,8 +505,8 @@
 @section('scripts')
     <script type="text/javascript">
         function checkEnvironment(val) {
-            var element=document.getElementById('environment_text_input');
-            if(val=='other') {
+            const element = document.getElementById('environment_text_input');
+            if(val==='other') {
                 element.style.display='block';
             } else {
                 element.style.display='none';

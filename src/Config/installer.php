@@ -13,7 +13,7 @@ return [
     |
     */
     'core' => [
-        'minPhpVersion' => '7.0.0',
+        'minPhpVersion' => '7.4.0',
     ],
     'final' => [
         'key' => true,
@@ -21,15 +21,26 @@ return [
     ],
     'requirements' => [
         'php' => [
+            'bcmath',
+            'ctype',
+            'fileinfo',
+            'JSON',
+            'mbstring',
             'openssl',
             'pdo',
-            'mbstring',
             'tokenizer',
-            'JSON',
+            'xml',
             'cURL',
+            'exif',
+            'gd',
+            'mysqlnd',
+            'pdo_mysql',
         ],
         'php-function' => [
             'apache_get_modules',
+            'exec',
+            'escapeshellarg',
+            'proc_open',
         ],
         'apache' => [
             'mod_rewrite',
@@ -106,7 +117,7 @@ return [
     'installed' => [
         'redirectOptions' => [
             'route' => [
-                'name' => 'welcome',
+                'name' => 'home',
                 'data' => [],
             ],
             'abort' => [
@@ -139,6 +150,6 @@ return [
     | Boolean value
     |
     */
-    'updaterEnabled' => 'true',
+    'updaterEnabled' => 'false',
 
 ];

@@ -1,6 +1,6 @@
 <?php
 
-namespace Smarteknoloji\SmartlInstaller\Helpers;
+namespace Smarteknoloji\SmartInstaller\Helpers;
 
 class InstalledFileManager
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Smarteknoloji\SmartlInstaller\Middleware;
+namespace Smarteknoloji\SmartInstaller\Middleware;
 
 use Closure;
 use Redirect;
