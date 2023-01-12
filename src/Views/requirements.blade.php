@@ -51,8 +51,9 @@
                 <span class="alert-text">{{ trans('installer_messages.requirements.warningNotExistPhpFunction') }}</span>
             </div>
         @endif
-        <div class="buttons">
-            <a @class(['button', 'warning'=> isset($requirements['warnings'])]) href="{{ route('LaravelInstaller::permissions') }}">
+        <div class="button-group">
+            <div @class(['gradient-btn-bg', 'warning'=> isset($requirements['warnings'])])></div>
+            <a href="{{ route('LaravelInstaller::permissions') }}" class="gradient-btn" role="button">
                 {{ trans('installer_messages.requirements.next') }}
                 <i class="fa fa-angle-right fa-fw" aria-hidden="true"></i>
             </a>

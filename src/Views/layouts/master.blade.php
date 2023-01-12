@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html lang="{{ app()->getLocale() }}">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
         <title>@if (trim($__env->yieldContent('template_title')))@yield('template_title') | @endif {{ trans('installer_messages.title') }}</title>
-        <link rel="icon" type="image/png" href="{{ asset('installer/img/favicon/favicon-16x16.png') }}" sizes="16x16"/>
-        <link rel="icon" type="image/png" href="{{ asset('installer/img/favicon/favicon-32x32.png') }}" sizes="32x32"/>
+        <link rel="icon" type="image/png" href="{{ asset('installer/img/favicon/favicon-48x48.png') }}" sizes="48x48"/>
+        <link rel="icon" type="image/png" href="{{ asset('installer/img/favicon/favicon-72x72.png') }}" sizes="72x72"/>
         <link rel="icon" type="image/png" href="{{ asset('installer/img/favicon/favicon-96x96.png') }}" sizes="96x96"/>
         <link href="{{ asset('installer/css/style.min.css') }}" rel="stylesheet"/>
         @yield('style')
@@ -21,6 +21,9 @@
         <div class="master">
             <div class="box">
                 <div class="header">
+                    @if(Request::is('install'))
+                        <img src="{{ asset('images/w240-full-white.svg') }}" alt="smartekCMS Full White Logo" width="60%" style="margin-bottom: 15px;">
+                    @endif
                     <h1 class="header__title">@yield('title')</h1>
                 </div>
                 <ul class="step">
@@ -85,7 +88,7 @@
                     @if(session()->has('errors'))
                         <div class="alert alert-danger" id="error_alert">
                             <button type="button" class="close" id="close_alert" data-dismiss="alert" aria-hidden="true">
-                                 <i class="fa fa-close" aria-hidden="true"></i>
+                                <i class="fa fa-close" aria-hidden="true"></i>
                             </button>
                             <h4>
                                 <i class="fa fa-fw fa-exclamation-triangle" aria-hidden="true"></i>
@@ -104,11 +107,15 @@
         </div>
         @yield('scripts')
         <script type="text/javascript">
-            var x = document.getElementById('error_alert');
-            var y = document.getElementById('close_alert');
-            y.onclick = function() {
-                x.style.display = "none";
-            };
+            const x = document.getElementById('error_alert');
+            const y = document.getElementById('close_alert');
+            if(typeof y !== 'undefined' && y !== null) {
+                y.onclick = function () {
+                    if(typeof x !== 'undefined' && x !== null) {
+                        x.style.display = "none";
+                    }
+                };
+            }
         </script>
     </body>
 </html>
