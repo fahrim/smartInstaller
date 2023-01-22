@@ -113,7 +113,7 @@ return [
 
                 'app_tabs' => [
                     'more_info' => 'ข้อมูลเพิ่มเติม',
-                    'broadcasting_title' => 'Broadcasting, Caching, Session, &amp; Queue',
+                    'broadcasting_title' => 'Broadcasting, Caching, Session, & Queue',
                     'broadcasting_label' => 'Broadcast Driver',
                     'broadcasting_placeholder' => 'Broadcast Driver',
                     'cache_label' => 'Cache Driver',
@@ -187,7 +187,7 @@ return [
         'title' => 'การติดตั้งเสร็จสิ้น',
         'templateTitle' => 'การติดตั้งเสร็จสิ้น',
         'finished' => 'ติดตั้งแอปพลิเคชันสำเร็จแล้ว',
-        'migration' => 'การย้าย &amp; Seed Console Output:',
+        'migration' => 'การย้าย & Seed Console Output:',
         'console' => 'แอพพลิเคชันคอนโซลเอาท์พุท:',
         'log' => 'บันทึกการติดตั้ง:',
         'env' => 'ไฟล์. env สุดท้าย:',

@@ -114,7 +114,7 @@ return [
                 'db_password_placeholder' => 'Veritabanı Şifresi',
                 'app_tabs' => [
                     'more_info' => 'Daha Fazla Bilgi',
-                    'broadcasting_title' => 'Yayıncılık, Önbellekleme, Oturum &amp; Kuyruk',
+                    'broadcasting_title' => 'Yayıncılık, Önbellekleme, Oturum & Kuyruk',
                     'broadcasting_label' => 'Yayıncı Sürücüsü',
                     'broadcasting_placeholder' => 'Yayıncı Sürücüsü',
                     'cache_label' => 'Önbellek Sürücüsü',

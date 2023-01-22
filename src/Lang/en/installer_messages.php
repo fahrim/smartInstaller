@@ -7,7 +7,7 @@ return [
      * Shared translations.
      *
      */
-    'title' => 'Laravel Installer',
+    'title' => 'Smart Installer',
     'next' => 'Next Step',
     'back' => 'Previous',
     'finish' => 'Install',
@@ -22,7 +22,7 @@ return [
      */
     'welcome' => [
         'templateTitle' => 'Welcome',
-        'title'   => 'Laravel Installer',
+        'title'   => 'Smart Installer',
         'message' => 'Easy Installation and Setup Wizard.',
         'next'    => 'Check Requirements',
     ],
@@ -116,7 +116,7 @@ return [
 
                 'app_tabs' => [
                     'more_info' => 'More Info',
-                    'broadcasting_title' => 'Broadcasting, Caching, Session, &amp; Queue',
+                    'broadcasting_title' => 'Broadcasting, Caching, Session, & Queue',
                     'broadcasting_label' => 'Broadcast Driver',
                     'broadcasting_placeholder' => 'Broadcast Driver',
                     'cache_label' => 'Cache Driver',
@@ -164,7 +164,7 @@ return [
             'title' => 'Classic Environment Editor',
             'save' => 'Save .env',
             'back' => 'Use Form Wizard',
-            'install' => 'Save and Install',
+            'install' => 'Save & Install',
         ],
         'success' => 'Your .env file settings have been saved.',
         'errors' => 'Unable to save the .env file, Please create it manually.',
@@ -178,7 +178,7 @@ return [
      *
      */
     'installed' => [
-        'success_log_message' => 'Laravel Installer successfully INSTALLED on ',
+        'success_log_message' => 'Smart Installer successfully INSTALLED on ',
     ],
 
     /*
@@ -190,7 +190,7 @@ return [
         'title' => 'Installation Finished',
         'templateTitle' => 'Installation Finished',
         'finished' => 'Application has been successfully installed.',
-        'migration' => 'Migration &amp; Seed Console Output:',
+        'migration' => 'Migration & Seed Console Output:',
         'console' => 'Application Console Output:',
         'log' => 'Installation Log Entry:',
         'env' => 'Final .env File:',
@@ -243,7 +243,7 @@ return [
         ],
 
         'log' => [
-            'success_message' => 'Laravel Installer successfully UPDATED on ',
+            'success_message' => 'Smart Installer successfully UPDATED on ',
         ],
     ],
 ];
