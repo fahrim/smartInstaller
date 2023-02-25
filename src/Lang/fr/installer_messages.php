@@ -160,7 +160,7 @@ return [
             'title' => 'Éditeur de texte classique',
             'save' => 'Enregistrer .env',
             'back' => 'Utiliser le formulaire',
-            'install' => 'Enregistrer et installer',
+            'install' => 'Installer',
         ],
         'success' => 'Vos paramètres de fichier .env ont été enregistrés.',
         'errors' => 'Impossible de sauvegarder le fichier .env, veuillez le créer manuellement.',

@@ -161,7 +161,7 @@ return [
             'title' => 'Classic Environment Editor',
             'save' => 'Simpan .env',
             'back' => 'Gunakan Form Wizard',
-            'install' => 'Simpan dan Pasang',
+            'install' => 'Pasang',
         ],
         'success' => 'Berkas penyetelan .env Anda telah disimpan.',
         'errors' => 'Tidak bisa menyimpan berkas .env. Silahkan buat secara manual.',

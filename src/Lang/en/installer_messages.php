@@ -164,7 +164,7 @@ return [
             'title' => 'Classic Environment Editor',
             'save' => 'Save .env',
             'back' => 'Use Form Wizard',
-            'install' => 'Save & Install',
+            'install' => 'Install',
         ],
         'success' => 'Your .env file settings have been saved.',
         'errors' => 'Unable to save the .env file, Please create it manually.',
