@@ -21,7 +21,7 @@ class RequirementsChecker
      * @param array $requirements
      * @return array
      */
-    public function check(array $requirements)
+    public function check(array $requirements): array
     {
         $results = [];
 
@@ -75,9 +75,10 @@ class RequirementsChecker
     /**
      * Check PHP version requirement.
      *
+     * @param string|null $minPhpVersion
      * @return array
      */
-    public function checkPHPversion(string $minPhpVersion = null)
+    public function checkPhpVersion(string $minPhpVersion = null): array
     {
         $minVersionPhp = $minPhpVersion;
         $currentPhpVersion = $this->getPhpVersionInfo();
@@ -91,14 +92,12 @@ class RequirementsChecker
             $supported = true;
         }
 
-        $phpStatus = [
+        return [
             'full' => $currentPhpVersion['full'],
             'current' => $currentPhpVersion['version'],
             'minimum' => $minVersionPhp,
             'supported' => $supported,
         ];
-
-        return $phpStatus;
     }
 
     /**
@@ -106,7 +105,7 @@ class RequirementsChecker
      *
      * @return array
      */
-    private static function getPhpVersionInfo()
+    private static function getPhpVersionInfo(): array
     {
         $currentVersionFull = PHP_VERSION;
         preg_match("#^\d+(\.\d+)*#", $currentVersionFull, $filtered);
@@ -123,7 +122,7 @@ class RequirementsChecker
      *
      * @return string _minPhpVersion
      */
-    protected function getMinPhpVersion()
+    protected function getMinPhpVersion(): string
     {
         return $this->_minPhpVersion;
     }
@@ -132,9 +131,10 @@ class RequirementsChecker
     /**
      * Check DB version requirement.
      *
+     * @param array|null $currentDBVersion
      * @return array
      */
-    public function checkDBversion(array $currentDBVersion = null)
+    public function checkDbVersion(array $currentDBVersion = null): array
     {
         // Step 1:: separate version for driver type
         $current = $this->getDBVersionInfo()['version'];
@@ -157,14 +157,12 @@ class RequirementsChecker
             $supported = true;
         }
 
-        $dbStatus = [
+        return [
             'driver' => $currentDBVersion['driver'],
             'current' => $currentDBVersion['version'],
             'minimum' => $minVersionDB,
             'supported' => $supported,
         ];
-
-        return $dbStatus;
     }
 
     /**
@@ -172,7 +170,7 @@ class RequirementsChecker
      *
      * @return array
      */
-    private static function getDBVersionInfo()
+    private static function getDBVersionInfo(): array
     {
         $dbServerVersion = \DB::connection()->getPdo()->getAttribute(\PDO::ATTR_SERVER_VERSION);
         $dbDriverName = \DB::connection()->getPdo()->getAttribute(\PDO::ATTR_DRIVER_NAME);
@@ -188,7 +186,7 @@ class RequirementsChecker
      *
      * @return string
      */
-    protected function getMinDBVersion()
+    protected function getMinDBVersion(): string
     {
         $current = $this->getDBVersionInfo()['version'];
 
@@ -208,7 +206,7 @@ class RequirementsChecker
      * @param $word
      * @return bool
      */
-    function containsWord($str, $word)
+    function containsWord($str, $word): bool
     {
         return !!preg_match('#\\b' . preg_quote($word, '#') . '\\b#i', $str);
     }

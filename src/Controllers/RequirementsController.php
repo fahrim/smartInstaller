@@ -28,11 +28,11 @@ class RequirementsController extends Controller
      */
     public function requirements(): View
     {
-        $dbSupportInfo = $this->requirements->checkDBversion(
+        $dbSupportInfo = $this->requirements->checkDbVersion(
             config('installer.core.minDbVersion')
         );
 
-        $phpSupportInfo = $this->requirements->checkPHPversion(
+        $phpSupportInfo = $this->requirements->checkPhpVersion(
             config('installer.core.minPhpVersion')
         );
 
