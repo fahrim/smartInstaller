@@ -11,6 +11,26 @@
 
 @section('container')
 
+    <ul class="list">
+        <li class="list__item list__title {{ $dbSupportInfo['supported'] ? 'success' : 'error' }}">
+            <strong>DB</strong>
+
+            <strong>
+                <small>
+                    (version {{ $dbSupportInfo['minimum'] }} required)
+                </small>
+            </strong>
+            <span class="float-right">
+            <strong>{{ $dbSupportInfo['current'] }}</strong>
+            <i class="fa fa-fw fa-{{ $dbSupportInfo['supported'] ? 'check-circle-o' : 'exclamation-circle' }} row-icon" aria-hidden="true"></i>
+        </span>
+        </li>
+        <li class="list__item {{ $dbSupportInfo['supported'] ? 'success' : 'error' }}">
+            Version {{ $dbSupportInfo['minimum'] }} required
+            <i class="fa fa-fw fa-{{ $dbSupportInfo['supported'] ? 'check-circle-o' : 'exclamation-circle' }} row-icon" aria-hidden="true"></i>
+        </li>
+    </ul>
+
     @foreach($requirements['requirements'] as $type => $requirement)
         <ul class="list">
             <li class="list__item list__title {{ $phpSupportInfo['supported'] ? 'success' : 'error' }}">
@@ -38,7 +58,7 @@
         </ul>
     @endforeach
 
-    @if ( ! isset($requirements['errors']) && $phpSupportInfo['supported'] )
+    @if ( ! isset($requirements['errors']) && $phpSupportInfo['supported'] && $dbSupportInfo['supported'])
         @if(isset($requirements['warnings']))
             <div class="alert alert-warning" id="error_alert">
                 <button type="button" class="close" id="close_alert" data-dismiss="alert" aria-hidden="true">

@@ -3,6 +3,7 @@
 namespace Smarteknoloji\SmartInstaller\Controllers;
 
 use Illuminate\Routing\Controller;
+use Illuminate\View\View;
 use Smarteknoloji\SmartInstaller\Helpers\RequirementsChecker;
 
 class RequirementsController extends Controller
@@ -23,17 +24,22 @@ class RequirementsController extends Controller
     /**
      * Display the requirements page.
      *
-     * @return \Illuminate\View\View
+     * @return View
      */
-    public function requirements()
+    public function requirements(): View
     {
+        $dbSupportInfo = $this->requirements->checkDBversion(
+            config('installer.core.minDbVersion')
+        );
+
         $phpSupportInfo = $this->requirements->checkPHPversion(
             config('installer.core.minPhpVersion')
         );
+
         $requirements = $this->requirements->check(
             config('installer.requirements')
         );
 
-        return view('vendor.installer.requirements', compact('requirements', 'phpSupportInfo'));
+        return view('vendor.installer.requirements', compact('requirements', 'phpSupportInfo', 'dbSupportInfo'));
     }
 }

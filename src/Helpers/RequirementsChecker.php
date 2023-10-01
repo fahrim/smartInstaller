@@ -5,11 +5,15 @@ namespace Smarteknoloji\SmartInstaller\Helpers;
 class RequirementsChecker
 {
     /**
-     * Minimum PHP Version Supported (Override is in installer.php config file).
+     * Minimum PHP,DB Version Supported (Override is in installer.php config file).
      *
-     * @var _minPhpVersion
+     * @var $_minPhpVersion
+     * @var $_minMysqlVersion
+     * @var $_minMariadbVersion
      */
     private $_minPhpVersion = '7.0.0';
+    private $_minMysqlVersion = '5.7.0';
+    private $_minMariadbVersion = '10.3.0';
 
     /**
      * Check for the server requirements.
@@ -122,5 +126,90 @@ class RequirementsChecker
     protected function getMinPhpVersion()
     {
         return $this->_minPhpVersion;
+    }
+
+
+    /**
+     * Check DB version requirement.
+     *
+     * @return array
+     */
+    public function checkDBversion(array $currentDBVersion = null)
+    {
+        // Step 1:: separate version for driver type
+        $current = $this->getDBVersionInfo()['version'];
+        if ($this->containsWord($current, 'mariaDB')) {
+            $currentDBVersion = $currentDBVersion['minMariadbVersion'];
+        } else {
+            $currentDBVersion = $currentDBVersion['minMysqlVersion'];
+        }
+
+        // Step 2
+        $minVersionDB = $currentDBVersion;
+        $currentDBVersion = $this->getDBVersionInfo();
+        $supported = false;
+
+        if ($currentDBVersion == null) {
+            $minVersionDB = $this->getMinDBVersion();
+        }
+
+        if (version_compare($currentDBVersion['version'], $minVersionDB) >= 0) {
+            $supported = true;
+        }
+
+        $dbStatus = [
+            'driver' => $currentDBVersion['driver'],
+            'current' => $currentDBVersion['version'],
+            'minimum' => $minVersionDB,
+            'supported' => $supported,
+        ];
+
+        return $dbStatus;
+    }
+
+    /**
+     * Get current DB version information.
+     *
+     * @return array
+     */
+    private static function getDBVersionInfo()
+    {
+        $dbServerVersion = \DB::connection()->getPdo()->getAttribute(\PDO::ATTR_SERVER_VERSION);
+        $dbDriverName = \DB::connection()->getPdo()->getAttribute(\PDO::ATTR_DRIVER_NAME);
+
+        return [
+            'driver' => $dbDriverName,
+            'version' => $dbServerVersion,
+        ];
+    }
+
+    /**
+     * Get minimum DB version ID.
+     *
+     * @return string
+     */
+    protected function getMinDBVersion()
+    {
+        $current = $this->getDBVersionInfo()['version'];
+
+        if ($this->containsWord($current, 'mariaDB')) {
+            $driverVersion = $this->_minMariadbVersion;
+        } else {
+            $driverVersion = $this->_minMysqlVersion;
+        }
+
+        return $driverVersion;
+    }
+
+    /**
+     * Search word in string.
+     *
+     * @param $str
+     * @param $word
+     * @return bool
+     */
+    function containsWord($str, $word)
+    {
+        return !!preg_match('#\\b' . preg_quote($word, '#') . '\\b#i', $str);
     }
 }

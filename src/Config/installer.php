@@ -13,7 +13,11 @@ return [
     |
     */
     'core' => [
-        'minPhpVersion' => '7.4.0',
+        'minPhpVersion' => '8.0.2',
+        'minDbVersion' => [
+            'minMysqlVersion' => '8.0.0',
+            'minMariadbVersion' => '10.3.0',
+        ]
     ],
     'final' => [
         'key' => true,
@@ -41,6 +45,7 @@ return [
             'exec',
             'escapeshellarg',
             'proc_open',
+            'proc_close',
         ],
         'apache' => [
             'mod_rewrite',
